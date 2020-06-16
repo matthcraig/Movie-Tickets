@@ -8,6 +8,7 @@ function Ticket(movieName, viewerAge, movieTime, newRelease){
   this.viewerAge = viewerAge,
   this.movieTime = movieTime,
   this.newRelease = newRelease
+  
 }
 
 ticket
