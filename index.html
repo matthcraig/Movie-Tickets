@@ -12,30 +12,34 @@
 <body>
   <div class="container">
   <h1>Movie Theater</h1>
-  <form id="Movies">
+  <form id="movies">
   <select class="form-control" id="movieTitles">
+    <label for=movies>Movies</label>
     <option>The Shining</option>
     <option>Gone With the Wind</option>
-    <option>Wizard of Oz</option>
-    <option>Trainspotting</option>
   </select>
+  <label for="timeOfDay">Time of day</label>
   <select class="form-control" id="timeOfDay">
     <option>Morning</option>
     <option>Afternoon</option>
     <option>Evening</option>
   </select>
+  <label for="age">Age</label>
   <select class="form-control" id="ageGroup">
     <option>Kid</option>
     <option>Adult</option>
     <option>Senior</option>
   </select>
+  <label for="new releases">New releases</label>
   <select class="form-control" id="newRelease">
-    <option>Yes</option>
-    <option>No</option>
+    <option>Wizard of Oz</option>
+    <option>Trainspotting</option>
   </select>
-  <button type="submit" class="btn">***</button>
+  <button type="submit" class="btn">Calculate Results</button>
   </form>
+  <div id="results">
+    <h3>The ticket you chose is <span class="movie-name"></span> at <span class="movie-time"></span> <span class="movie-price"> $ </span></h3>
+  </div>
 </div>
-  
 </body>
 </html>

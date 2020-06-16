@@ -2,28 +2,50 @@
 function TicketBuyer(){
   this.tickets = [];
 }
-function Ticket(movieName, viewerAge, movieTime, newRelease){
-  this.movieName = movieName,
-  this.viewerAge = viewerAge,
-  this.movieTime = movieTime,
-  this.newRelease = newRelease
-
+TicketBuyer.prototype.addMovie = function(ticket){
+  this.tickets.push(ticket);
 }
 
-Ticket.prototype.finalPrice = function(){
+Ticket.prototype.priceAdj = function(){
   let moviePrice = 10;
-  if (this.selectedAgeGroup === "senior") {
+  if (this.viewerAge === "senior") {
     moviePrice -= 1;
-  } else if {
-    ()
+  } else if (this.viewerAge === "kid") {
+    moviePrice -= 1;
+  } else if (this.movieTime === "morning"){
+    moviePrice -= 1;
+  } else if (this.newRelease === true){
+    moviePrice += 1;
+  } else {
+  return this.moviePrice;
   }
 }
 
+function Ticket(movieName, viewerAge, movieTime, newRelease, moviePrice){
+  this.movieName = movieName,
+  this.viewerAge = viewerAge,
+  this.movieTime = movieTime,
+  this.newRelease = newRelease,
+  this.moviePrice = moviePrice
+}
+Ticket.prototype.fullReadout = function(){
+  return this.movieName + " " + this.viewerAge + " " + this.movieTime + " " + this.newRelease + " " + this.moviePrice;
+}
 //UI logic
 $(document).ready(function(){
   $("form#movies").submit(function(event) {
-  const selectedMovieTitle = $("select#movieTitles").val();
-  const seletedTimeOfDay = $("select#timeOfDay").val();
-  const selectedAgeGroup = $("select#ageGroup").val();  
-})
-})
+  const inputMovieTitle = $("select#movieTitles").val();
+  const inputTimeOfDay = $("select#timeOfDay").val();
+  const inputAgeGroup = $("select#ageGroup").val(); 
+  let moviePrice = 10;
+  
+  event.preventDefault();
+
+  let boughtTicket = new Ticket(inputMovieTitle, inputAgeGroup, inputTimeOfDay, moviePrice);
+  $(".movie-name").text(boughtTicket.movieName)
+  $(".movie-time").text(boughtTicket.movieTime)
+  $(".movie-price").text(boughtTicket.priceAdj())
+  $("#results").show();
+
+  });
+});

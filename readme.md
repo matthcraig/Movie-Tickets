@@ -1,12 +1,18 @@
-# _{Application Name}_
+# _Movie Ticket Calculator_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Calculates movie ticket price based on three factors: age, time of day and release date, June 16, 2020_
 
-#### By _**{List of contributors}**_
+#### By _Matthew Craig and Emma Hellman_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This website calculates movie ticket price based on age, time of day and release date. The age fields include kid, adult and senior. The time of day includes morning, afternoon and evenings. The old movies are The Shining and Gone With the Wind and the new movies include Wizard of Oz and Trainspotting._
+
+## Behavior Driven Development
+| Behavior | Input | Output |
+| ---------|-------|--------|
+|Program offers a set of movies, times, and ages to choose from|"The Shining", "Evening", "Adult"| "Your movie is The Shining, in the evening, $10|
+|Program takes info from a form and returns your choices with an adjusted price|"The Shining", "Morning", "Senior"|"Your movie is The Shining, in the morning, $8|
 
 ## Setup/Installation Requirements
 
@@ -20,15 +26,15 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are now known bugs._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Contact ehh801@icloud.com for questions or concerns. _
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_Virtual Studio Code_
 
 ### License
 
